@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->enum('user_role', ['admin', 'user'])->default('user');
             $table->enum('user_type', ['user', 'organization'])->default('user');
-            $table->enum('blood_type', ['A-', 'A+', 'B-', 'B+', 'AB-', 'AB+', 'O-', 'O+'])->default(null);
-            $table->enum('province', ["Aleppo","Damascus","Daraa","Deir ez-Zor","Hama","Hasakah","Homs","Idlib","Latakia","Quneitra","Raqqa","Rif Dimashq","Tartus","Suwayda"])->default(null);
+            $table->enum('blood_type', ['A-', 'A+', 'B-', 'B+', 'AB-', 'AB+', 'O-', 'O+'])->nullable()->default(null);
+            $table->enum('province', ["Aleppo","Damascus","Daraa","Deir ez-Zor","Hama","Hasakah","Homs","Idlib","Latakia","Quneitra","Raqqa","Rif Dimashq","Tartus","Suwayda"])->nullable()->default(null);
             $table->text('location')->nullable()->default(null);
             $table->string('phone_number')->nullable()->default(null);
             $table->string('email')->unique();
